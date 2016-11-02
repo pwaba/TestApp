@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/food"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/main_logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="foodie"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        android:layout_marginTop="132dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foodie Feed Feeder"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/main_logo_text"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create login"
+        android:textColor="@android:color/white"
+        android:textSize="24dp"
+        android:paddingTop="320dp"
+        android:layout_below="@+id/main_logo_text"
+        android:layout_centerHorizontal="true"/>
+
+    
+</RelativeLayout>

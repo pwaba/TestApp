@@ -4,4 +4,6 @@
     <string name="edit_message">Enter message</string>
     <string name="button_send">Send</string>
     <string name="regular_account_login">Login</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

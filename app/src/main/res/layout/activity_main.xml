@@ -11,6 +11,38 @@
         android:src="@drawable/food"
         android:scaleType="fitXY"/>
 
+    <TextView
+        android:id="@+id/main_logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="foodela"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        android:layout_marginTop="132dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Local food made easy"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/main_logo_text"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in or create an account using email"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:paddingTop="260dp"
+        android:layout_below="@+id/main_logo_text"
+        android:layout_centerHorizontal="true"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +50,7 @@
         android:textColor="@android:color/white"
         android:background="@android:color/transparent"
         android:textSize="40sp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="480dp"
         android:layout_centerHorizontal="true"
         android:onClick="onLoginClick" />
 

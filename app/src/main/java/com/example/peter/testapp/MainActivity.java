@@ -33,55 +33,34 @@ import java.io.FileOutputStream;
 
             setContentView(R.layout.login_page);
 
+    }
 
-            final Button b1,b2;
-            final EditText ed1,ed2;
+        public void onLoginClick2(View view) {
+            Button b1, b2;
+            EditText ed1, ed2;
 
-            final TextView tx1;
-            final int counter = 3;
+            TextView tx1;
 
-            b1=(Button)findViewById(R.id.button);
+            b1 = (Button) findViewById(R.id.button);
 
-            ed1=(EditText)findViewById(R.id.editText);
+            ed1 = (EditText) findViewById(R.id.editText);
 
-            ed2=(EditText)findViewById(R.id.editText2);
+            ed2 = (EditText) findViewById(R.id.editText2);
 
-            b2=(Button)findViewById(R.id.button2);
-            tx1=(TextView)findViewById(R.id.textView3);
+            b2 = (Button) findViewById(R.id.button2);
+            tx1 = (TextView) findViewById(R.id.textView3);
             tx1.setVisibility(View.GONE);
 
-            b1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(ed1.getText().toString().equals("admin") &&
 
-                            ed2.getText().toString().equals("admin")) {
-                        Toast.makeText(getApplicationContext(), "Redirecting...",Toast.LENGTH_SHORT).show();
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
+            if (ed1.getText().toString().equals("admin") &&
 
-                        tx1.setVisibility(View.VISIBLE);
-                        tx1.setBackgroundColor(Color.RED);
-                        //counter--;
-                        tx1.setText(Integer.toString(counter));
+                    ed2.getText().toString().equals("admin")) {
+                Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
-                        if (counter == 0) {
-                            b1.setEnabled(false);
-                        }
-                    }
-                }
-            });
-
-            b2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-
-
-    }
+            }
+        }
     }
 
 

@@ -13,55 +13,53 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.peter.testapp.users.User;
+import com.example.peter.testapp.users.UserHandler;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.List;
 
 
-    public class MainActivity extends Activity {
+public class MainActivity extends Activity {
 
+    private UserHandler userHandler;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+        this.userHandler = new UserHandler(getApplicationContext());
+    }
 
+    public void onLoginClick(View view) {
 
-        }
-
-        public void onLoginClick(View view) {
-
-            setContentView(R.layout.login_page);
+        setContentView(R.layout.login_page);
 
     }
 
-        public void onLoginClick2(View view) {
-            Button b1, b2;
-            EditText ed1, ed2;
+    public void onLoginClick2(View view) {
+        Button b1, b2;
+        EditText ed1, ed2;
 
-            TextView tx1;
+        b1 = (Button) findViewById(R.id.button);
+        ed1 = (EditText) findViewById(R.id.editText);
+        ed2 = (EditText) findViewById(R.id.editText2);
+        b2 = (Button) findViewById(R.id.button2);
 
-            b1 = (Button) findViewById(R.id.button);
+        if (this.userHandler.checkUser(ed1.getText().toString(), ed2.getText().toString())) {
+            Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.overview_main);
+        } else {
+            Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
-            ed1 = (EditText) findViewById(R.id.editText);
-
-            ed2 = (EditText) findViewById(R.id.editText2);
-
-            b2 = (Button) findViewById(R.id.button2);
-            tx1 = (TextView) findViewById(R.id.textView3);
-            tx1.setVisibility(View.GONE);
-
-
-            if (ed1.getText().toString().equals("admin") &&
-
-                    ed2.getText().toString().equals("admin")) {
-                Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
-
-            }
         }
+
+
     }
+}
 
 
 

@@ -3,7 +3,6 @@ package com.example.peter.testapp.users;
 
 import android.content.Context;
 
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +41,7 @@ public class UserHandler {
     public boolean checkUser(final String name, final String password) {
 
         for (User user : this.users) {
-            if (user.getName().toString().equals(name) && user.getPassword().toString().equals(password))
+            if (user.getName().equals(name) && user.getPassword().equals(password))
                 return true;
         }
         return false;
